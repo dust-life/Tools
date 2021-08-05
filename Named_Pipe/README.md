@@ -1,1 +1,1 @@
-
+使用Named_Pipe来传输，达到绕过cs 1mb的限制
