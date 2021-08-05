@@ -10,3 +10,6 @@
 ```
 upload_file /tmp/frpc.bin \\.\pipe\mypipe
 ```
+
+> https://github.com/CCob/SharpBlock/blob/master/Program.cs#L425
+> https://github.com/CCob/SharpBlock/blob/master/upload.cna
