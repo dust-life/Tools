@@ -29,7 +29,7 @@ public partial class StoredProcedures
 }
 '@
 $clr_command_temp = @'
-use msdb;
+use master;
 alter database master set trustworthy on;
 exec sp_configure 'show advanced options',1;
 reconfigure;
